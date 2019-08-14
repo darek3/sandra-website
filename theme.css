@@ -1,0 +1,204 @@
+body {
+  background-color: #708090;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+  grid-column: span 12;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  background-color: black !important;
+  padding: 20px;
+}
+
+header a {
+  text-decoration: none !important;
+}
+
+nav {
+  grid-column: span 12;
+  background-color: #708090;
+  text-align: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+nav li {
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+  display: inline;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  outline: 5px dotted white;
+}
+
+.photo {
+  grid-column: 2/6;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.photo>img {
+  object-fit: cover;
+  width: 85%;
+  border-radius: 50%;
+}
+
+section {
+  grid-column: 7/12;
+  font-family: 'Niramit', sans-serif;
+}
+
+section h1, .contactinfo h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+section .fa-facebook {
+  font-size: 1em;
+}
+
+#services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prices {
+  grid-column: 3/12;
+  text-align: left;
+  margin-bottom: 2em;
+  color: black;
+}
+
+.pricelist {
+  width: 50%;
+}
+
+.pricelist li {
+  list-style: none;
+}
+
+.pricelist h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
+
+.photogallery {
+  grid-column: span 12;
+}
+
+.filter {
+  text-align: center;
+  padding-bottom: 1em;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.filter a {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+footer {
+  grid-column: span 12;
+  background-color: black;
+  text-align: center;
+  padding-top: 2em;
+  margin-top: 3em;
+}
+
+a.footer {
+  color: #708090 !important;
+}
+
+a.footer:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  font-size: 3em;
+  margin-right: .1em;
+  margin-left: .1em;
+}
+
+.fa-instagram {
+  font-size: 3em;
+  margin-right: .1em;
+  margin-left: .1em;
+}
+
+.note {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  color: #708090;
+  font-size: 1.4em;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+.row {
+  /*solution from https://css-tricks.com/seamless-responsive-photo-grid*/
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 5px;
+  -moz-column-count: 3;
+  -moz-column-gap: 5px;
+  column-count: 3;
+  column-gap: 5px;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.row a img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .row {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
